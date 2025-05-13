@@ -1,6 +1,6 @@
-// This is a more accurate implementation of code analysis
 
 type Language = "cpp" | "java" | "python"
+
 
 interface AnalysisResult {
     timeComplexity: {
@@ -19,9 +19,7 @@ interface AnalysisResult {
 }
 
 export async function analyzeCode(code: string, language: Language): Promise<AnalysisResult> {
-    // In a real application, this would be a server-side API call
-    // For demo purposes, we'll analyze the code directly
-
+    
     return new Promise((resolve) => {
         setTimeout(() => {
             const result = performAnalysis(code, language)
